@@ -1,0 +1,20 @@
+[package]
+name = "epoll-test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.86"
+byteorder = "1.5.0"
+crossbeam = "0.8.4"
+ctrlc = "3.4.4"
+env_logger = "0.11.3"
+libc = "0.2.155"
+log = "0.4.21"
+rand = "0.8.5"
+
+[profile.release]
+lto = true
+codegen-units = 1
